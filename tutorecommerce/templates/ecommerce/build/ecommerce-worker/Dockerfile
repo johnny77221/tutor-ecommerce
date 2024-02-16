@@ -12,7 +12,7 @@ RUN useradd --home-dir /openedx --create-home --shell /bin/bash --uid ${APP_USER
 USER ${APP_USER_ID}
 
 RUN mkdir /openedx/ecommerce_worker && \
-    git clone https://github.com/edx/ecommerce-worker.git --branch {{ OPENEDX_COMMON_VERSION }} --depth 1 /openedx/ecommerce_worker
+    git clone https://github.com/johnny77221/ecommerce-worker --branch {{ OPENEDX_COMMON_VERSION }} --depth 1 /openedx/ecommerce_worker
 WORKDIR /openedx/ecommerce_worker
 
 # Install python venv
